@@ -1,0 +1,79 @@
+{
+    "name": "muhpuc40/chunkit",
+    "description": "Chunked, resumable, server-authoritative file uploads for Laravel 11/12 with a queued merge and zero extra infrastructure.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "upload",
+        "chunked",
+        "resumable",
+        "file-upload"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/muhpuc40/chunkit",
+    "authors": [
+        {
+            "name": "Minhaj",
+            "homepage": "https://github.com/muhpuc40"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/muhpuc40/chunkit/issues",
+        "source": "https://github.com/muhpuc40/chunkit"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-fileinfo": "*",
+        "illuminate/bus": "^11.0|^12.0",
+        "illuminate/cache": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/filesystem": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/queue": "^11.0|^12.0",
+        "illuminate/routing": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/validation": "^11.0|^12.0",
+        "laravel/framework": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.1",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Muhpuc40\\Chunkit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Muhpuc40\\Chunkit\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Muhpuc40\\Chunkit\\ChunkitServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "lint": "vendor/bin/pint --test",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
